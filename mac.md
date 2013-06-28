@@ -22,7 +22,10 @@ iPhoneやiPadのアプリを開発する上で、iOSシミュレーターが必�
 
 
 Xcodeの参考URL
+
 - [Wikipedia : Xcode](http://ja.wikipedia.org/wiki/Xcode)
+
+
 
 
 ## Homebrewのインストール
@@ -44,8 +47,11 @@ Terminalを開いて
 
 
 Homebrewの参考URL
-- [Homebrew](http://mxcl.github.io/homebrew/)
+
 - [GitHub : mxcl/homebrew](https://github.com/mxcl/homebrew)
+- [Homebrew : Homebrewの公式サイト](http://mxcl.github.io/homebrew/)
+
+
 
 
 ## Gitのインストール
@@ -63,16 +69,18 @@ Terminalで同様に
 とすれば、カンタンにGitをインストールすることができます。
 
 Gitの参考URL
+
 - [Wikipedia : Git](http://ja.wikipedia.org/wiki/Git)
-- [Gitのチュートリアル](http://git-scm.com/book/ja/)
-- [GitHub](http://github.com)
-- [GitHubが提供しているGitをWeb上で学べるサイト](http://try.github.io/levels/1/challenges/1)
+- [GitHub : git/git](https://github.com/git/git)
+- [Git : Gitの公式サイト](http://git-scm.com/book/ja/)
+- [GitHub - Build Software Better, Together](http://github.com)
+- [Code School Try Git : GitHubが提供しているGitをWeb上で学べるサイト](http://try.github.io/levels/1/challenges/1)
 
 
 
 ## Oh-my-zshのインストール
 
-開発を進めていく中で、Terminalはもっともよく使うツールです。	
+開発を進めていく中で、Terminalはもっともよく使うツールです。  
 
 そのTerminalを使うにあたって、Shellというものを理解しましょう。
 
@@ -93,7 +101,7 @@ Terminalで
 
 とすれば、oh-my-zshがインストールされます。
 
-![](http://media.tumblr.com/9299ae99181cb73ab5c73093f534364e/tumblr_inline_mp39rkbEeO1rbxx4s.png)
+![](http://media.tumblr.com/598fc1074a9a1b38c75d878e57677ed7/tumblr_inline_mp3el1Cob31rbxx4s.png)
 
 一度Terminalを閉じて再度開くと、このように色がついてみやすくなったり、自動補完機能がつくようになっているのがわかると思います。
 
@@ -106,6 +114,7 @@ Terminalの色はメニューのPreferencesから変更することができま�
 ![](http://media.tumblr.com/310e99797ea7610faee730f00ebdd340/tumblr_inline_mp39ylBWih1rbxx4s.png)
 
 Oh-my-zshの参考URL
+
 - [Wikipedia : シェル](http://ja.wikipedia.org/wiki/シェル)
 - [Wikipedia : Bash](http://ja.wikipedia.org/wiki/Bash)
 - [Wikipedia : Zsh](http://ja.wikipedia.org/wiki/Zsh)
@@ -165,10 +174,12 @@ SublimeTextは非常に豊富な機能があり、自分でも様々にカスタ
 SublimeTextは基本的に無料で使い続けることができます。
 
 
-Emacsに関しては、はじめコマンドに慣れる必要があるので、以下の参考URLなどを参考にして、学んでみることをおすすめします。
+Emacsに関しては、はじめコマンドに慣れる必要があるので、以下の参考URL
+などを参考にして、学んでみることをおすすめします。
 
 
 参考URL
+
 - [Wikipedia : Emacs](http://ja.wikipedia.org/wiki/Emacs)
 - [ドットインストール : Emacs入門](http://dotinstall.com/lessons/basic_emacs)
 - [ドットインストール : Sublimet Text 2入門](http://dotinstall.com/lessons/basic_sublimetext)
@@ -195,13 +206,13 @@ RubyはHomebrewで最新版をインストールすることもできますが�
 
 開発していくにあたり、Rubyのバージョンを共存させ、カンタンにバージョンを変更できれば、非常に便利になります。
 
-rbenvはそのためのツールとして、最も人気のあるRubyのバージョン管理システムです。		
+rbenvはそのためのツールとして、最も人気のあるRubyのバージョン管理システムです。        
 
 ここでは、rbenvを使ってRubyをインストールしましょう。
 
 Terminalを開いて、まずはrbenvをインストールします。
 
-    brew install rbenv	
+    brew install rbenv  
 
 インストールが完了したら、rbenvの設定をShellに追加します。ここではZshを使っているので、Zshの設定ファイルである、.zshrcに設定を追加します。
 
@@ -242,8 +253,13 @@ globalでシステム全体でこのバージョンを使用するように設�
 Terminalを再起動させ、Rubyのバージョンが変わっているかどうか確認してみましょう。
 
     ruby -v
-    > ruby 1.9.3p429 (2013-05-15 revision 40747) [x86_64-darwin12.4.1]	
+    > ruby 1.9.3p429 (2013-05-15 revision 40747) [x86_64-darwin12.4.1]  
 
+
+参考URL
+
+- [Wikipedia : Ruby](http://ja.wikipedia.org/wiki/Ruby)
+- [Ruby : Rubyの公式サイト](http://www.ruby-lang.org/ja)
 
 
 ## Ruby on Railsのインストール
@@ -294,12 +310,159 @@ Terminalでインストールします。
 これで、Railsの現在の最新バージョンであるrails-4.0.0がインストールされたと思います。
 
 
+参考URL
+
+- [Wikipedia : RubyGems](http://ja.wikipedia.org/wiki/RubyGems)
+- [Wikipedia : Ruby on Rails](http://ja.wikipedia.org/wiki/Ruby_on_Rails)
+- [GitHub : rails/rails](https://github.com/rails/rails)
+- [RubyGems : RubyGemsの公式サイト](http://rubygems.org)
+- [The Ruby Toolbox : Gemをカテゴリーごとに探せるサイト](https://www.ruby-toolbox.com)
+- [Ruby on Rails : Ruby on Railsの公式サイト](http://rubyonrails.org)
+- [Railscasts : Railsを使ったアプリケーションの作り方を学べるサイト](http://railscasts.com)
 
 
 
+## Node.jsのインストール
+
+世の中にはたくさんの言語があります。なかでも、JavaScriptはダントツでもっとも広く使われている言語といっても過言ではありません。
+
+> **注** GitHubの[言語ごとの順位](https://github.com/languages)を見るとわかります。
+
+
+もともと、JavaScriptはブラウザ上でアニメーションをしたり、Google Mapsで広く知られたAjax（ページを再読み込みしないで表示だけが変わる技術）を行う用途で広く使われていました。
+
+このような用途はクライアントサイドと呼ばれ、カンタンにいうとユーザーのブラウザ上だけで完結するものとしてのみ使われていました。
+
+しかし、近年JavaScriptをもっとRubyやPythonのようにサーバーサイドでも使おうという動きが活発になり、そのフレームワークとしてNode.jsが開発されました。
+
+
+Node.jsを直接使わないにしても、JavaScriptをターミナル上で動かすためにもNode.jsは非常に便利なので、ここでインストールします。
+
+
+Rubyと同じようにHomebrewでインストールできますが、Node.jsのバージョン管理システムである、nodebrewを使えばrbenvと同じようにバージョンを共存させることができるので、それを使ってインストールします。
+
+
+Terminalで
+
+    curl https://raw.github.com/hokaccha/nodebrew/master/nodebrew | perl - setup
+
+とすればnodebrewがインストールされます。
+
+nodebrewを有効にするために、rbenvの時と同じように.zshrcに設定を追加します。
+
+    echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> ~/.zshrc
+
+そして.zshrcの変更を反映させます。
+
+    source ~/.zshrc
+
+これで、nodebrewを使う準備が整いました。
+
+現在の最新安定版のv0.10をインストールします。同じくTerminalで
+
+    nodebrew install v0.10
+
+インストールが完了したら、それを設定します。
+
+    nodebrew use v0.10
+
+無事に設定されれば、バージョンを確認すると現在の最新である、v0.10.12となっていることが確認できます。
+
+    node -v
+    > v0.10.12
+
+また、nodebrewでインストールしたnodeのバージョンも次のようにして確認できます。
+
+    nodebrew ls
+
+これで、Terminal上でJavaScriptを動かせるようになりました。
+
+Terminalでnodeと入力すると
+
+    node 
+    > 1 + 1
+    2
+
+のような形で、JavaScriptを試すことができます。
 
 
 
+## ExpressとCoffeeScriptのインストール
+
+
+RubyのRubyGemsに当たるものが、JavaScriptではNode Packaged Modulesです。
+
+このNode Packaged Modulesを使って、RubyのRuby on Railsにあたる、ExpressとCoffeeScriptをインストールします。
+
+まずは、Expressをインストールします。
+
+    npm intall -g express
+
+この-gというのは、グローバルすなわちシステム全体にインストールする場合につけます。（もしもつけない場合は、現在のディレクトリのしたにインストールされてしまいます。）  
+
+
+
+次に、CoffeeScriptをインストールします。
+
+CoffeeScriptについて、少し説明すると、基本的にCoffeeScriptはJavaScriptと全く同じ言語だと考えてもらって大丈夫です。
+
+ただ、JavaScriptは少し変わった文法で書きづらい側面があり、それを読みやすく書きやすくしたのがCoffeeScriptです。
+
+なので、ただ見た目だけが違っているだけで、JavaScriptと全く同じ文法で、全く同じ挙動をします。
+
+
+イメージとしては、JavaScriptもCoffeeScriptも同じ日本語だが、ちょっと現代人にとっては読みにくい古文に当たるものがJavaScriptで、読みやすく書きやすい現代文に当たるものがCoffeeScriptだと思っておけばいいと思います。
+
+> **注** 実際CoffeeScriptは新しい言語で2009年の終わりにJavaScriptをもっと書きやすくするという目的で開発されました。
+> しかし、今では非常に広く使われており、RailsでもJavaScriptではなくCoffeeScriptがデフォルトで採用されています。
+
+
+CoffeeScriptのインストールは、同じように
+
+    npm intall -g coffee-script
+
+としてインストールできます。
+
+
+これで、nodeと同じようにcoffeescriptもTerminal上で試すことができるようになりました。
+
+JavaScriptとCoffeeScriptの違いはたとえば、次のような例で見ることができます。
+
+JavaScriptで、1から10まで配列を作って、それを足し合わせるというのをやると
+
+    var items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    var total = 0;
+
+    for ( i = 0 ; i < items.length; i++) {
+      total += items[i];
+    }
+
+    console.log(total);
+
+CoffeeScriptの場合
+
+    items = [1..10]
+    total = 0
+
+    for item in items
+      total += item
+
+    console.log total
+
+
+となります。
+
+
+参考URL
+
+- [Wikipedia : CoffeeScript](http://ja.wikipedia.org/wiki/CoffeeScript)
+- [GitHub : isaacs/npm](https://github.com/isaacs/npm)
+- [GitHub : visionmedia/express](https://github.com/visionmedia/express)
+- [GitHub : jashkenas/coffee-script](https://github.com/jashkenas/coffee-script)
+- [npm : npmの公式サイト](https://npmjs.org)
+- [Express - Node.js Web Application Framework : Expressの公式サイト](http://expressjs.com)
+- [CoffeeScript ; CoffeeScriptの公式サイト](http://coffeescript.org)
+- [js2coffee - Convert JavaScript Code to CoffeeScript : JavaScriptをCoffeeScriptに翻訳できるサイト](http://js2coffee.org)
 
 
 
