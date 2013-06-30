@@ -344,7 +344,8 @@ Rubyと同じようにHomebrewでインストールできますが、Node.jsの�
 
 Terminalで
 
-    curl https://raw.github.com/hokaccha/nodebrew/master/nodebrew | perl - setup
+    curl -L git.io/nodebrew | perl - setup
+
 
 とすればnodebrewがインストールされます。
 
@@ -384,6 +385,14 @@ Terminalでnodeと入力すると
     2
 
 のような形で、JavaScriptを試すことができます。
+
+
+参考URL
+
+- [Wikipedia : Node.js](http://ja.wikipedia.org/wiki/Node.js)
+- [GitHub : joyent/node](https://github.com/joyent/node)
+- [Node.js : Node.jsの公式サイト](http://nodejs.org)
+
 
 
 
@@ -463,6 +472,5 @@ CoffeeScriptの場合
 - [Express - Node.js Web Application Framework : Expressの公式サイト](http://expressjs.com)
 - [CoffeeScript ; CoffeeScriptの公式サイト](http://coffeescript.org)
 - [js2coffee - Convert JavaScript Code to CoffeeScript : JavaScriptをCoffeeScriptに翻訳できるサイト](http://js2coffee.org)
-
 
 
