@@ -196,7 +196,7 @@ Railsでビューとコントローラーを作る場合は、Terminalで次の�
 
 ここではユーザーの情報を表示するためのビューとコントローラーを作るので、usersという名前をつけます。
 
-	rails generate controller users index show
+	rails g controller users index show
 
 このindexというのは、ユーザーの一覧ページ。showというのは、ユーザーのプロフィールページです。
 
@@ -418,8 +418,7 @@ Twitterでは https://twitter.com/ryooopan というURLにアクセスすると�
 	MitakalabTwitter::Application.routes.draw do
 	  get "users/index"
 	  get "users/show"
-	  # The priority is based upon order of creation: first created -> highest pr\
-	iority.                                                                       
+	  # The priority is based upon order of creation: first created -> highest priority.                                                                       
 	  # See how all your routes lay out with "rake routes".                       
 	  ...
 	end
@@ -433,8 +432,7 @@ Twitterでは https://twitter.com/ryooopan というURLにアクセスすると�
 	MitakalabTwitter::Application.routes.draw do
 	  get "users/index"
 	  get "users/show/:username" => "users#show"
-	  # The priority is based upon order of creation: first created -> highest pr\
-	iority.                                                                       
+	  # The priority is based upon order of creation: first created -> highest priority.                                                                       
 	  # See how all your routes lay out with "rake routes".                       
 	  ...
 	end
@@ -460,6 +458,10 @@ Twitterでは https://twitter.com/ryooopan というURLにアクセスすると�
 
 しかし、ryooopanにアクセスしているのに、Shohei Aokiのページが表示されてしまっています。
 
+
+![](https://raw.github.com/mitakalab/wiki/master/screenshots/rails/rails-17.png)
+
+
 URLごとに表示するページを変えたいですね。
 
 
@@ -483,12 +485,12 @@ URLごとに表示するページを変えたいですね。
 
 ここで、:usernameはWebページを見る人がRailsに送っている情報です。
 
-この情報のことを「パラメータ」と言います。
+この情報のことを「パラメーター」と言います。
 
-そして、実はこのパラメータをコントローラーで受け取ることができます。
+そして、実はこのパラメーターをコントローラーで受け取ることができます。
 
 
-それはこのような形で、パラメータを取得できるようになります。
+それはこのような形で、パラメーターを取得できるようになります。
 
 	params[:username]
 
@@ -634,12 +636,12 @@ app/controllers/users_controller.rbのshowの部分を次のように編集し�
 
 その枠とは次のようなものです。
 
-	  name  |  phone  |  email  | address
-	---------------------------------------  
-	        |         |         |          
-	        |         |         |          
-	        |         |         |          
-	        |         |         |          
+	    id    |  　 name  　 |    phone    |    email    |    address
+	--------------------------------------------------------------------  
+  	          |             |             |             |          
+	          |             |             |             |
+	          |             |             |             |
+	          |             |             |             |
 
 電話帳にこのような枠を書くようなイメージです。
 
@@ -659,12 +661,12 @@ app/controllers/users_controller.rbのshowの部分を次のように編集し�
 
 読書感想日誌のスキーマは次のようになるかもしれません。
 
-	  book  |  author  |  date  |  note
-	-------------------------------------
-	        |          |        |          
-	        |          |        |          
-	        |          |        |          
-	        |          |        |          
+	    id    |    book    |    author    |    date    |    note
+	----------------------------------------------------------------
+ 	          |            |              |            |            
+ 	          |            |              |            |            
+ 	          |            |              |            |            
+ 	          |            |              |            |            
 
 このように、大きな白いノートは保存しておきたい情報をすべてそこで管理するものになりました。
 
@@ -674,7 +676,7 @@ Webアプリケーションのデータベースもそれと同じです。
 1万ページくらいある白いノートに当たるのが「データベース」、そこに最初に書き込む枠組みが「スキーマ」といいます。
 
 	データベース : 1万ページの白いノート
-	スキーマ　　 : 枠組み
+	スキーマ　　 : 情報を入力するための共通の枠
 
 ここまでで、データベースに必要なものが整いました。
 
@@ -684,7 +686,7 @@ Webアプリケーションのデータベースもそれと同じです。
 
 
 
-## 
+## マイグレーション : 枠は直接書かずに、印刷する
 
 さて、ここまででできて気をよくしてしまい、電話帳や読書日誌のデータベースを作ったと、学校で友達に漏らしてしまいました。
 
@@ -721,6 +723,17 @@ Railsではデータベースを作るときに、この状況を最初から想
 
 
 このPDFに当たるものがマイグレーションファイルと呼ばれるものです。
+
+そして、印刷することをマイグレートする、と呼びます。
+
+> **注** migrationという名の通り、移住をしやすくするためのようなイメージです。
+> 移住するときに家を立てなければなりませんが、家の設計図さえあれば、いくらでも同じ家を立てることができます。
+> その家の設計図がmigration fileです。しかし、このmigration fileだけでは、住めません。
+> 家をたてるために、その設計図から家を実際に建てなければなりません。それがmigrateです。
+
+
+
+
 
 ここまでで、データベースのほんのちょっと、なんとなくのイメージがつかめたかもしれません。
 
@@ -767,12 +780,12 @@ Terminalで
 
 それでは、データベースの枠は次のようになっていればいいですね。
 
-	  name  |  username  |  location  |  about
-	--------------------------------------------
-	        |            |            |          
-	        |            |            |          
-	        |            |            |          
-	        |            |            |          
+	    id    |    name    |    username    |    location    |    about
+	-----------------------------------------------------------------------
+	          |            |                |                |                    
+	          |            |                |                |                    
+	          |            |                |                |                    
+	          |            |                |                |                    
 
 このようにユーザーの情報を持っているひとかたまりをRailsではモデルと言います。
 
@@ -1363,6 +1376,37 @@ app/views/tweets/index.html.erb を次のように編集してみましょう。
 
 
 ![](https://raw.github.com/mitakalab/wiki/master/screenshots/rails/rails-16.png)
+
+
+
+
+
+## この次のステップは？
+
+ここまで学んできて、ある程度Railsの仕組みが理解できたでしょうか？
+
+他にもまだまだやりたいことはたくさんあると思います。
+
+- 画像をアップロードするためには、どうしたらいいの？
+- ユーザーのログインをして、ユーザーごとにツイートを表示したい。
+- 実際のTwitterと連動して、ここでつぶやいたことをTwitterにも表示させたい。
+
+などなど。
+
+ここから先は、無限です。
+
+Mitakalabというコミュニティで学ぶもよし、本で独学するもよし、Google先生にきくもよし。
+
+自分だけのアプリを作るべくがんばってください。
+
+参考までに、この次のステップで有用なものを挙げておきます。
+
+
+- [Railscasts](http://railscasts.com) : Railsの応用例がたくさん載っているサイトです。（英語・日本語）
+- [Cumiki](http://cumiki.com/ruby) : Railsにかぎらず、Railsの応用例をどうやって付け加えるかを、レゴを組み立てるような手順で学ぶことができます。（日本語）
+- [ドットインストール](http://dotinstall.com) : Railsにかぎらず、基本的な点を動画を使ってわかりやすく解説されています。（日本語）
+- [Ruby Toolbox](http://ruby-toolbox.com) : RailsにGemを追加して機能を付け加えたいときに、どんなGemがあるのかをカテゴリーごとに見ることができます。（英語）
+
 
 
 
